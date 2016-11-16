@@ -85,29 +85,34 @@ function updateData(){
     $('.number-cell').css('font-size',0.6*cellSideLength+'px');
 }
 $(document).keydown(function(e){
+	e.preventDefault();
 	switch(e.keyCode){
 		case 37:
 			dir=0;
 			if(moveLeft()){
 				 setTimeout("getNumber()",210);
+				  setTimeout("isgameover()",300);
 				}
 			break;
 		case 38:
 			dir=1;
 			if(moveUp()){
 				setTimeout("getNumber()",210);
+				 setTimeout("isgameover()",300);
 				}
 			break;
 		case 39:
 			dir=2;
 			if(	moveRight()){
 				setTimeout("getNumber()",210);
+				 setTimeout("isgameover()",300);
 				}	
 			break;
 		case 40:
 			dir=3;
 			if(	moveDown()){
 				setTimeout("getNumber()",210);
+				 setTimeout("isgameover()",300);
 				}
 			break;
 		}
@@ -118,6 +123,7 @@ document.addEventListener('touchstart',function(event){
 });
 
 document.addEventListener('touchend',function(event){
+	event.preventDefault();
     endx = event.changedTouches[0].pageX;
     endy = event.changedTouches[0].pageY;
 
@@ -310,3 +316,8 @@ function moveDown(){
 	setTimeout("updateData()",200);
 	return true;
 }
+function isgameover(){
+	if(nospace( board ) &&!canMoveLeft( board ) &&!canMoveRight( board ) &&!canMoveUp( board ) &&!canMoveDown( board )){
+		alert("Game Over!")
+		}
+	}
