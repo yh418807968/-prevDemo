@@ -149,6 +149,7 @@ document.addEventListener('touchend',function(event){
     else{
         if( deltay > 0 ){
             //move down
+			event.preventDefault();
 			dir=3;
             if( moveDown() ){
                 setTimeout("getNumber()",210);
