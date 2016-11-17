@@ -4,7 +4,7 @@ var WINDOW_HEIGHT=800;
 var RADIUS=6;
 var MARGIN_LEFT=0;
 var MARGIN_TOP=0;
-var endTime=new Date(2016,10,7,0,0,0);
+var endTime=new Date(2016,10,18,0,0,0);
 
 var curShowTimeSeconds=0;
 var drawing=document.getElementById("canvas");
