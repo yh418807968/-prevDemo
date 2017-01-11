@@ -1,0 +1,220 @@
+/*公用*/
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+html{
+	width:100%;
+	height: 100%;
+}
+body{
+	width:100%;
+	height:100%;
+	font-family: "微软雅黑";
+	/*position: relative;*/
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+h1,h2{
+	font-weight: normal;
+}
+
+header, #container, footer{
+	width:100%;
+	box-sizing: border-box;
+	padding:0 240px;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+/*注册页面*/
+/*header*/
+header{
+	width:100%;
+	height:66px;
+	background: #4abdcc;
+	color:#fff;
+	line-height: 66px;
+}
+.left .logo{
+	width:95px;
+	height:40px;
+	float: left;
+	margin-top: 10px;
+	background: url(../imgs/icons.png) no-repeat;
+	background-position: 0 -54px;
+}
+header .right{
+	float:right;
+}
+.right ul{
+	float:right;
+}
+.right ul li{
+	float:left;
+	margin-right:10px;
+}
+.right ul li a{
+	color:#fff;
+}
+/*主体部分*/
+#container{
+	width:100%;
+}
+#container .left{
+	width:260px;
+}
+.reg h1{
+	width:100%;
+	margin:10px 0;
+    font-size: 20px;
+    color:#aaa;
+    text-align: left;
+    padding:5px 0;
+    border-bottom:1px solid #ccc;
+}
+.reg .regDiv{
+	background:#f7f7f7;
+	padding:0 20px;
+    width:100%;	
+    color:#999;
+    border-radius: 5px ;
+}
+.regDivTitle{
+	height:30px;
+	line-height: 30px;
+	border-bottom: 1px solid #ccc;
+}
+.regDivTitle h2{
+	font-size: 15px;
+	float:left;
+	color:#5c5c5c;
+}
+.regDivTitle div{
+	float:right;
+}
+.regDivTitle div a{
+	color:#4abdcc;
+}
+.regContent .label{
+	font-size:12px;
+	height:30px;
+	line-height: 30px;
+}
+.regContent input{
+	width:100%;
+	height:30px;
+	background:#eaeaea;
+	line-height: 30px;
+	border:0px solid #eaeaea;
+	border-radius:3px;
+}
+ .errorMsg{
+	/*height:12px;*/
+	font-size:12px;
+	color:#fc5d7b;
+	
+	/*visibility:hidden*/
+}
+button{
+	width:60px;
+	height:30px;
+	margin:5px auto;
+	background-color: #4abdcc;
+	color:#fff;
+	border: 0px solid #a4bdcc;
+	border-radius:5px;
+	outline:none;
+}
+/* 登录浮出层 */
+#loginMask{
+	width:100%;
+	height:100%;
+	background: #aaa;
+	position: fixed;
+	top:0;
+	left:0;
+	z-index:1000;
+	opacity: 0.5;
+	visibility: hidden;
+}
+#loginPanel{
+	position: fixed;
+	left:50%;
+	margin-left:-175px;
+	margin-top: 100px;
+	padding: 20px 40px;
+	width:350px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	opacity: 1;
+	z-index: 1001;
+	visibility: hidden;
+
+}
+.loginDivTitle h1{
+	font-size: 20px;
+    color:#aaa;
+	width:100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+.loginContent .header{
+	height:30px;
+	line-height: 30px;
+	margin:10px 0;
+}
+.loginContent .header a:first-child{
+	color:#ccc;
+	float: left;
+}
+.loginContent .header a:last-child{
+	color:#4abdcc;
+	float: right;
+}
+.loginContent input{
+	width:100%;
+	height:30px;
+	border: 1px solid #ccc;
+	margin-bottom: 15px;
+	border-radius:5px;
+}
+.forget a{
+	color:#4abdcc;
+	float: right;
+	margin-bottom: 10px;
+}
+#loginBtn{
+	width:100%;
+	height:30px;
+	color:#fff;
+	background-color: #4abdcc;
+	border-radius: 5px;
+	line-height: 30px;
+}
+.closeBtn{
+	display: block;
+	position:absolute;
+	top:-5px;
+	right:-5px;
+	width:22px;
+	height:22px;
+	line-height:20px;
+	border:1px solid #999;
+	border-radius:11px;
+	text-align: center;
+	font-size: 15px;
+	color:#000;
+	background: #dadada;
+}

@@ -1,0 +1,511 @@
+/*公用*/
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+	outline: none;
+}
+html{
+	width:100%;
+	height: 100%;
+}
+body{
+	width:99%;
+	height:100%;
+	margin:0 2px auto;
+	border:1px solid #ccc;
+	border-bottom: 0;
+	font-family: "微软雅黑";
+	/*position: relative;*/
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*h1,h2,h3,h4,h5{
+	font-weight: normal;
+}*/
+header, .main,.parts ,footer{
+	/*overflow: auto;*/
+	width:100%;
+}
+
+/*homePage*/
+/*header部分*/
+header{
+	height:70px;
+	background-color: #f7f7f7;
+	position:fixed;
+	z-index:100;
+}
+ header .logo{
+	display: block;
+	position:absolute;
+	bottom:10px;
+	left:200px;
+	width:159px;
+	height:52px;
+}
+header .logo::after{
+	content:"";
+	display:block;
+	position:absolute;
+	top:62px;
+	left:-15px;
+	width: 0; 
+	height: 0;
+	border-top:20px solid #f7f7f7;
+	border-right:100px solid transparent;
+	border-bottom:30px solid transparent;
+	border-left: 100px solid transparent;
+	
+}
+.sign{
+	position:absolute;
+	right:130px;
+}
+.sign ul{
+	float:right;
+	margin:10px;
+}
+.sign ul li{
+	font-size:12px;
+	margin-right:15px;
+	float:left;
+	height:50px;
+	line-height:50px;
+}
+.sign ul li a{
+	font-size:15px;
+	color:#fa8c00;
+}
+/* container */
+/*.container{
+	width:100%;
+	
+}
+.container{
+	content: "";
+	display: block;
+	clear:both;
+}*/
+.main{
+	width:100%;
+	height:100%;
+	position: relative;
+}
+#mainHomePage{
+	background:url(../imgs/bckHome.png) no-repeat ;
+	background-size: 100% 100%;
+}
+.slogan{
+	position: absolute;
+	top:160px;
+	left:10%;
+	width:700px;
+}
+.slogan img{
+	width:450px;
+	height:150px;
+}
+.slogan p{
+	margin:30px ;
+	font-size:30px;
+	color:#fbfbfb;
+	line-height: 50px;
+}
+.planner{
+	width:340px;
+	height:210px;
+	background-color: #fbfbfb;
+	padding: 20px;
+	position:absolute;
+	top:180px;
+	right:10%;
+	border-radius: 2px;
+}
+.planner h2{
+	font-size:20px;
+	height:25px;
+	line-height: 25px;
+	text-align: center;
+}
+/*.planner form{
+	margin:5px 0;	
+}*/
+ .planner form p{
+	width:100%;
+	height:30px;
+	/*border:1px solid #ccc;*/
+	position: relative;
+	margin:15px 0;
+	line-height: 30px;
+}
+
+.planner form p:nth-child(2){
+	border:1px solid #ccc;
+}
+.planner form input[name="destination"]{
+	width:100%;
+	height:30px;
+	border:1px solid #ccc;
+	background-color:  #fbfbfb;
+	display: inline-block;
+}
+.planner form input[name="fromTo"]{
+	width:50px;
+	height:25px;
+	border:none;
+	background-color: #fbfbfb;
+	vertical-align: 10px;
+
+}
+.planner form select{
+	border:none;
+	width:80px;
+	background-color: #fbfbfb;
+	vertical-align: 10px;
+	color:#ccc;
+}
+.planner form button{
+	width:200px;
+	height:30px;
+	line-height: 30px;
+	background-color: #fa8c00;
+	color:#fff;
+	font-size:18px;
+	text-align: center;
+	margin:0 50px;
+	border-radius: 5px;
+	border:none;
+	/*font-weight: bolder;*/
+	font-family: "微软雅黑";
+}
+.planner form p span{
+	line-height: 28px;
+	height:28px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.parts h1{
+	font-size: 30px;
+	height:80px;
+	line-height: 80px;
+	text-align: center;
+}
+
+.part_11{
+	margin: 0 150px;
+	margin-bottom: 30px;
+	background-color: #fff;
+	/*height:380px;*/
+}
+.part_11:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.part_11 .left,.right{
+	float:left;
+	width:50%;
+	height:100%;
+}
+.part_11 .left{
+	text-align: right;
+
+}
+.part_11 .right{
+	padding-left:30px;
+	text-align: left;
+}
+.part_11 .number{
+	display: block;
+	width:40px;
+	height:40px;
+	border-radius:20px;
+	color:#fff;
+	box-shadow: 2px 2px 3px 3px #ccc;
+	font-size:20px;
+	line-height: 40px;
+	text-align: center;
+	margin:20px auto;
+}
+.part_11 h3{
+	font-size: 25px;
+	line-height: 35px;
+	margin-bottom:20px;
+}
+.part_11 h4,.part_11 li{
+	display: block;
+	font-size:15px;
+	font-weight:normal;
+	line-height: 20px;
+}
+#part_1 .number{
+	background-color: #00a4da;
+}
+#part_2 .number{
+	background-color: #27b696;
+}
+#part_3 .number{
+	background-color: #7ed321;
+}
+.part_22 img{
+	width:100%;
+}
+/*footer*/
+footer{
+	background-color: #000;
+	padding:30px 250px;
+	position: relative;
+
+}
+footer>div{
+	margin:0 auto;
+}
+footer>div:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+footer .logo{
+	/*width:25%;*/
+	float:left;
+	margin:20px;
+	margin-right: 70px;
+}
+footer .logo img{
+	width:120px;
+	height:43px;
+}
+footer ul{
+	width:50px;
+	/*width:25%;*/
+	float:left;
+	margin-right:50px;
+	margin-top:20px;
+	font-size:12px;
+	color: #f7f7f7;
+}
+footer li{
+	font-size:12px;
+	height:18px;
+	line-height: 18px;
+}
+footer li:first-child{
+	font-size:15px;
+	margin-bottom: 20px;
+}
+footer li a{
+	color:#f7f7f7;
+}
+/*reg  与homePage部分样式相同的不再重复*/
+#mainReg{
+	background:url(../imgs/bckReg.png) no-repeat ;
+	background-size: 100% 100%;
+}
+.regPanel{
+	width:250px;
+	background-color: #fef9f8;
+	padding:20px;
+	position:absolute;
+	top:150px;
+	right:150px;
+	border-radius: 5px;
+}
+.regPanel h2{
+	color: #fa8c00;
+	font-size:20px;
+	line-height: 30px;
+	height:30px;
+	text-align: center
+}
+.regPanel hr{
+	height:3px;
+	width:150px;
+	margin:10px auto;
+	background-color: #fa8c00;
+	border-radius:2px;
+	border:1px solid transparent;
+}
+form>div{
+	width:100%;
+	height:46px;
+}
+.regPanel select,.regPanel input,.regPanel button,.comment{
+	height:25px;
+	line-height: 25px;
+	border:1px solid #ccc;
+	font-size:10px;
+	
+}
+input::-webkit-input-placeholder { /* WebKit browsers */  
+  color: #ddd;  
+}  
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+  color:  #ddd;  
+}  
+input::-moz-placeholder { /* Mozilla Firefox 19+ */  
+  color: #ddd;  
+}  
+input:-ms-input-placeholder { /* Internet Explorer 10+ */  
+  color:  #ddd;  
+}
+.regPanel span{
+	width:100%;
+	height:15px;
+	margin:3px 0;
+	line-height: 15px;
+	margin-bottom: 5px;
+	text-align: left;
+	display: block;
+	color:#aaa;
+	font-size:10px;
+	/*text-indent:2em;*/
+}
+.regPanel span:not(.visibleError){
+	visibility: hidden;
+}
+.regPanel select{
+	display: inline-block;
+	width:50px;
+	margin-right:5px;
+}
+ input[name="phone"]{
+	display: inline-block;
+	width:150px;
+}
+ input[name="imgCodeInput"],input[name="phoneCodeInput"]{
+ 	width:140px;
+ 	/*display: inline-block;*/
+ 	margin-right:5px;
+ }
+.imgCode,.phoneCodeSend{
+	display: inline-block;
+	width:60px;
+	border-radius: 3px;
+	height:25px;
+}
+.imgCode{
+	background-color: #fff;
+	border:1px solid #ccc;
+}
+.phoneCodeSend{
+	background:url(../imgs/CodeSend.png) no-repeat;
+	background-size: 100% 100%;
+	color:#fff;
+}
+input[name="username"],input[name="password"],input[name="password_2"]{
+	width:100%;
+}
+.regPanel button[type="submit"]{
+	width:100%;
+	background:url(../imgs/register.png) no-repeat;
+	background-size: 100% 100%;
+	color:#f7f7f7;
+	border-radius: 3px;
+	font-size:12px;
+}
+.comment{
+	border:none;	
+	margin-top:10px;
+}
+.comment>div{
+	display: inline-block;
+}
+.comment>div:first-child{
+	float:left;
+}
+.comment>div:last-child{
+	float:right;
+}
+.comment a{
+	color:#5e01aa;
+}
+/* 登录浮出层 */
+#loginMask{
+	width:100%;
+	height:100%;
+	background: #aaa;
+	position: fixed;
+	top:0;
+	left:0;
+	z-index:1000;
+	opacity: 0.5;
+	visibility: hidden;
+}
+#loginPanel{
+	position: fixed;
+	left:50%;
+	margin-left:-175px;
+	margin-top: 100px;
+	padding: 20px 40px;
+	width:350px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	opacity: 1;
+	z-index: 1001;
+	visibility: hidden;
+
+}
+.loginDivTitle h1{
+	font-size: 20px;
+    color:#aaa;
+	width:100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+.loginContent .header{
+	height:30px;
+	line-height: 30px;
+	margin:10px 0;
+}
+.loginContent .header a:first-child{
+	color:#ccc;
+	float: left;
+}
+.loginContent .header a:last-child{
+	color:#4abdcc;
+	float: right;
+}
+.loginContent input{
+	width:100%;
+	height:30px;
+	border: 1px solid #ccc;
+	margin-bottom: 15px;
+	border-radius:5px;
+}
+.forget a{
+	color:#4abdcc;
+	float: right;
+	margin-bottom: 10px;
+}
+#loginBtn{
+	width:100%;
+	height:30px;
+	color:#fff;
+	background-color: #4abdcc;
+	border-radius: 5px;
+	line-height: 30px;
+}
+.closeBtn{
+	display: block;
+	position:absolute;
+	top:-5px;
+	right:-5px;
+	width:22px;
+	height:22px;
+	line-height:20px;
+	border:1px solid #999;
+	border-radius:11px;
+	text-align: center;
+	font-size: 15px;
+	color:#000;
+	background: #dadada;
+}
