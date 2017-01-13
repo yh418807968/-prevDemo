@@ -16,7 +16,7 @@ body{
 	border:1px solid #ccc;
 	border-bottom: 0;
 	font-family: "微软雅黑";
-	/*position: relative;*/
+	position: relative;
 }
 ul{
 	list-style: none;
@@ -354,7 +354,7 @@ input::-moz-placeholder { /* Mozilla Firefox 19+ */
 input:-ms-input-placeholder { /* Internet Explorer 10+ */  
   color:  #ddd;  
 }
-.regPanel span{
+.regPanel .errorMsg{
 	width:100%;
 	height:15px;
 	margin:3px 0;
@@ -366,9 +366,9 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	font-size:10px;
 	/*text-indent:2em;*/
 }
-.regPanel span:not(.visibleError){
+/*.errorMsg:not(.visibleError){
 	visibility: hidden;
-}
+}*/
 .regPanel select{
 	display: inline-block;
 	width:50px;
@@ -382,7 +382,11 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
  	width:140px;
  	/*display: inline-block;*/
  	margin-right:5px;
- }
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!不加为什么会出错？*/
+  input[name="imgCodeInput"]{
+  	vertical-align: 10px;
+  }
 .imgCode,.phoneCodeSend{
 	display: inline-block;
 	width:60px;
@@ -401,7 +405,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 input[name="username"],input[name="password"],input[name="password_2"]{
 	width:100%;
 }
-.regPanel button[type="submit"]{
+ #regBtn{
 	width:100%;
 	background:url(../imgs/register.png) no-repeat;
 	background-size: 100% 100%;
@@ -440,6 +444,7 @@ input[name="username"],input[name="password"],input[name="password_2"]{
 #loginPanel{
 	position: fixed;
 	left:50%;
+	top:0;
 	margin-left:-175px;
 	margin-top: 100px;
 	padding: 20px 40px;
@@ -448,13 +453,13 @@ input[name="username"],input[name="password"],input[name="password_2"]{
 	border: 1px solid #ccc;
 	border-radius: 10px;
 	opacity: 1;
-	z-index: 1001;
+	z-index: 2000;
 	visibility: hidden;
 
 }
 .loginDivTitle h1{
 	font-size: 20px;
-    color:#aaa;
+    color:#fa8c00;
 	width:100%;
 	height: 40px;
 	line-height: 40px;
@@ -471,18 +476,30 @@ input[name="username"],input[name="password"],input[name="password_2"]{
 	float: left;
 }
 .loginContent .header a:last-child{
-	color:#4abdcc;
+	color:#fa8c00;
 	float: right;
 }
 .loginContent input{
 	width:100%;
 	height:30px;
 	border: 1px solid #ccc;
-	margin-bottom: 15px;
+	/*margin-bottom: 15px;*/
 	border-radius:5px;
 }
+.loginContent .errorMsg{
+	width:100%;
+	height:15px;
+	margin:3px 0;
+	line-height: 15px;
+	margin-bottom: 5px;
+	text-align: left;
+	display: block;
+	color:#aaa;
+	font-size:10px;
+	/*text-indent:2em;*/
+}
 .forget a{
-	color:#4abdcc;
+	color:#fa8c00;
 	float: right;
 	margin-bottom: 10px;
 }
@@ -490,9 +507,10 @@ input[name="username"],input[name="password"],input[name="password_2"]{
 	width:100%;
 	height:30px;
 	color:#fff;
-	background-color: #4abdcc;
+	background-color: #fa8c00;
 	border-radius: 5px;
 	line-height: 30px;
+	border:none;
 }
 .closeBtn{
 	display: block;
@@ -508,4 +526,18 @@ input[name="username"],input[name="password"],input[name="password_2"]{
 	font-size: 15px;
 	color:#000;
 	background: #dadada;
+}
+/*重置密码页面*/
+/*样式与注册页面完全一样*/
+#mainReset{
+	background:url(../imgs/bckReg.png) no-repeat ;
+	background-size: 100% 100%;
+}
+ #resetBtn{
+	width:100%;
+	background:url(../imgs/register.png) no-repeat;
+	background-size: 100% 100%;
+	color:#f7f7f7;
+	border-radius: 3px;
+	font-size:12px;
 }

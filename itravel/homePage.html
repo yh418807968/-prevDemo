@@ -12,7 +12,7 @@
 	</div>
 	<div class="sign">
 		<ul>
-			<li><a href="login.html">登录</a></li>
+			<li><a href="JavaScript:void(0);" class="login">登录</a></li>
 			<li><a href="reg.html">注册</a></li>
 		</ul>
 	</div>
@@ -138,6 +138,36 @@
 	</div>
 	
 </footer>
-	
+<!--登录浮出层 -->
+<div id="loginMask">
+</div>
+<div id="loginPanel">
+    <a href="javascript:void(0);" class="closeBtn">×</a>
+    <div class="loginDivTitle">
+    	<h1>登&nbsp;&nbsp;录</h1>
+    	<!-- <div>
+    	    或者<a href="reg.html">注册</a>
+    	</div> -->
+    </div>
+    <div class="loginContent">
+        <div class="header">
+            <a href="javascript:fnChangeType();" class="changeType">使用用户名登录></a>
+            <a href="reg.html">注册</a>
+        </div>
+    	<form action="login.php"  method="get">
+    		<p class="text">
+    			<input type="text" name="phone" id="loginType" placeholder="手机号">
+    			<span class="errorMsg"></span>
+    		</p>
+    		<p class="textPwd">
+    			<input type="password" name="password" id="password" placeholder="密码">
+    			<span class="errorMsg"></span>
+    		</p>
+    		<p class="forget"><a href="forgetPwd.html">忘记密码？</a></p>
+            <button type="submit" id="loginBtn">登  录</button>
+    	</form> 		
+    </div>
+</div>
+<script src="js/loginMask.js"></script>
 </body>
 </html>

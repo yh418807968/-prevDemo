@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+	<div href="homePage.html" class="logo">
+		<img src="imgs/logo.png" alt="logo">
+	</div>
+	<div class="sign">
+		<ul>
+			<li><a href="javascript:void(0);" class="login">登录</a></li>
+			<li><a href="reg.html">注册</a></li>
+		</ul>
+	</div>
+</header>
+<div class="main" id="mainReset">
+	<div class="slogan">
+		<div class="logoBig">
+			<img src="imgs/logo_big.png" alt="logo">
+		</div>
+		<p>探索世界，开启全新方式</p>
+	</div>
+	<div class="resetgPanel regPanel">
+		<h2>重置密码</h2>
+		<hr>
+		<form action="">
+			<div>
+				<select name="phonePre" >
+					<option value="86">86</option>
+				</select>
+				<input type="text" name="phone" placeholder="输入用于登录的手机号">
+				<span class="errorMsg"></span>
+			</div>
+			 <div>
+			    <input type="text" name="imgCodeInput" placeholder="图片验证码"> 
+				<div class="imgCode"></div>
+				<span class="errorMsg"></span>
+			</div>
+			<div>
+			    <input type="text" name="phoneCodeInput" placeholder="输入短信中的验证码">
+				<button class="phoneCodeSend">发送验证码</button>
+				<span class="errorMsg"></span>
+			</div>
+			<div>
+				<input type="password" name="password" placeholder="输入新的8-12位密码，需包含字母和数字">
+				<span class="errorMsg"></span>
+			</div>
+			<div>
+				<input type="password" name="password_2" placeholder="请重复输入密码">
+				<span class="errorMsg"></span>
+			</div>
+			<!-- <button type="submit">重 置</button> -->
+		</form>
+		<button type="submit" id="resetBtn">重 置</button>
+	</div>
+</div>
+<footer>
+	<div>
+	    <div class="logo">
+	    	<img src="imgs/logo_big.png" alt="">
+	    </div>
+	    <ul>
+	    	<li>网站</li>
+	    	<li><a href="">新手上路</a></li>
+	    	<li><a href="">使用帮助</a></li>
+	    	<li><a href="">网站地图</a></li>
+	    	<li><a href="">版权声明</a></li>
+	    </ul>
+	    <ul>
+	    	<li>关于</li>
+	    	<li><a href="">关于我们</a></li>
+	    	<li><a href="">加入我们</a></li>
+	    	<li><a href="">合作伙伴</a></li>
+	    </ul>
+	    <ul>
+	    	<li>帮助</li>
+	    	<li><a href="">联系我们</a></li>
+	    	<li><a href="">FAQ</a></li>
+	    	<li><a href="">会员条款</a></li>
+	    	<li><a href="">免费声明</a></li>
+	    </ul>
+	</div>	
+</footer>
+
+<!--登录浮出层 -->
+<div id="loginMask" >
+</div>
+<div id="loginPanel">
+    <a href="javascript:void(0);" class="closeBtn">×</a>
+    <div class="loginDivTitle">
+    	<h1>登&nbsp;&nbsp;录</h1>
+    	<!-- <div>
+    	    或者<a href="reg.html">注册</a>
+    	</div> -->
+    </div>
+    <div class="loginContent">
+        <div class="header">
+            <a href="javascript:fnChangeType();" class="changeType">使用用户名登录></a>
+            <a href="reg.html">注册</a>
+        </div>
+    	<form action="login.php"  method="get">
+    		<p class="text">
+    			<input type="text" name="phone" id="loginType" placeholder="手机号">
+    			<span class="errorMsg"></span>
+    		</p>
+    		<p class="textPwd">
+    			<input type="password" name="password" id="password" placeholder="密码">
+    			<span class="errorMsg"></span>
+    		</p>
+    		<p class="forget"><a href="forgetPwd.html">忘记密码？</a></p>
+            <button type="submit" id="loginBtn">登  录</button>
+    	</form> 		
+    </div>
+</div>
+<script src="js/check.js"></script>
+<script src="js/loginMask.js"></script>
+</body>
+</html>
