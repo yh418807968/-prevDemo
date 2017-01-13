@@ -308,7 +308,7 @@ footer li a{
 	background-size: 100% 100%;
 }
 .regPanel{
-	width:250px;
+	width:300px;
 	background-color: #fef9f8;
 	padding:20px;
 	position:absolute;
@@ -325,7 +325,7 @@ footer li a{
 }
 .regPanel hr{
 	height:3px;
-	width:150px;
+	width:170px;
 	margin:10px auto;
 	background-color: #fa8c00;
 	border-radius:2px;
@@ -371,15 +371,15 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 }*/
 .regPanel select{
 	display: inline-block;
-	width:50px;
+	width:60px;
 	margin-right:5px;
 }
  input[name="phone"]{
 	display: inline-block;
-	width:150px;
+	width:190px;
 }
  input[name="imgCodeInput"],input[name="phoneCodeInput"]{
- 	width:140px;
+ 	width:180px;
  	/*display: inline-block;*/
  	margin-right:5px;
 }
@@ -389,7 +389,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
   }
 .imgCode,.phoneCodeSend{
 	display: inline-block;
-	width:60px;
+	width:70px;
 	border-radius: 3px;
 	height:25px;
 }
