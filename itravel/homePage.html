@@ -139,7 +139,7 @@
 	
 </footer>
 <!--登录浮出层 -->
-<div id="loginMask">
+<div id="loginMask" >
 </div>
 <div id="loginPanel">
     <a href="javascript:void(0);" class="closeBtn">×</a>
@@ -154,7 +154,7 @@
             <a href="javascript:fnChangeType();" class="changeType">使用用户名登录></a>
             <a href="reg.html">注册</a>
         </div>
-    	<form action="login.php"  method="get">
+    	<form >
     		<p class="text">
     			<input type="text" name="phone" id="loginType" placeholder="手机号">
     			<span class="errorMsg"></span>
@@ -164,8 +164,9 @@
     			<span class="errorMsg"></span>
     		</p>
     		<p class="forget"><a href="resetPwd.html">忘记密码？</a></p>
-            <button type="submit" id="loginBtn">登  录</button>
-    	</form> 		
+    	</form> 
+    	<!-- <button type="submit" id="loginBtn">登  录</button>		 -->
+    	<input type="button" id="loginBtn" value="登 录">
     </div>
 </div>
 <script src="js/loginMask.js"></script>

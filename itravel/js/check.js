@@ -1,21 +1,18 @@
 /*输入格式检测*/
-
-// var mainReg= document.getElementById("mainReg");
-var inputs = document.getElementsByTagName("input");
-// var errorMsg=document.getElementsByClassName;
 var errMsg = {"phone":"请输入正确的手机号码",
               "imgCodeInput":"图形验证码不能为空",
               "phoneCodeInput":"短信验证码不能为空",
                "username":"用户名不能为空",
                "password":"密码需为8-12为的数字或字母",
                "password_2":"密码不一致"};
-
-for(var i= 0;i < inputs.length; i++){
-	inputs[i].onblur = function(){
-		//alert(this.id)
-		checkInput(this);
-	}
+//检查各输入框的格式
+$("input:not([type='button'])").each(function(){
+  $(this).blur(function(){
+    checkInput(this);
+  })
 }
+
+)
 //检查输入格式
 function checkInput(obj){
 	var ID = obj.name;
@@ -273,6 +270,42 @@ $('#resetBtn').click(function(){
       }else {           //注册成功
         fnlogin();//注册成功后弹出登录框
       }
+    },
+    error: function(){
+      alert('响应消息有问题！请检查Network！');
+    }
+  });
+ });
+/*为发送验证码添加事件监听*/
+$(".phoneCodeSend").click(function(){
+  // //假数据测试
+  //     var count = 60;
+  //    var timer =  setInterval(function(){
+  //       $(".phoneCodeSend").val(count+"秒").removeClass("bckImg").attr({"disabled":"disabled"});      
+  //       count--;
+  //       if(count ===0){
+  //         clearInterval(timer);
+  //         $(".phoneCodeSend").val("重新发送").addClass("bckImg").removeAttr("disabled");
+  //         //  $(".phoneCodeSend").val("重新发送").css("background","url(imgs/codeSend.png) no-repeat ").css("background-position","100% 100%").removeAttr("disabled");
+  //       }
+  //     },1000);
+  发起异步POST请求
+  $.ajax({
+    type: 'POST',
+    url: '../data/reset.php',
+    success: function(){
+      //进入倒计时
+     var count = 60;
+          var timer =  setInterval(function(){
+             $(".phoneCodeSend").val(count+"秒").removeClass("bckImg").attr({"disabled":"disabled"});      
+             count--;
+             if(count ===0){
+               clearInterval(timer);
+               $(".phoneCodeSend").val("重新发送").addClass("bckImg").removeAttr("disabled");
+               //  $(".phoneCodeSend").val("重新发送").css("background","url(imgs/codeSend.png) no-repeat ").css("background-position","100% 100%").removeAttr("disabled");
+             }
+           },1000);
+     
     },
     error: function(){
       alert('响应消息有问题！请检查Network！');

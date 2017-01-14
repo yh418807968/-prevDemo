@@ -24,6 +24,9 @@ ul{
 a{
 	text-decoration: none;
 }
+input[type="button"]{
+	cursor: pointer;
+}
 /*h1,h2,h3,h4,h5{
 	font-weight: normal;
 }*/
@@ -385,22 +388,25 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 }
 /*!!!!!!!!!!!!!!!!!!!!!!!不加为什么会出错？*/
   input[name="imgCodeInput"]{
-  	vertical-align: 10px;
+  	vertical-align: 8px;
   }
 .imgCode,.phoneCodeSend{
 	display: inline-block;
 	width:70px;
 	border-radius: 3px;
 	height:25px;
+	color:#fff;
+	background: #ccc;
 }
 .imgCode{
 	background-color: #fff;
 	border:1px solid #ccc;
 }
-.phoneCodeSend{
+ .bckImg{
+	/*倒计时结束后背景显示图片*/
 	background:url(../imgs/CodeSend.png) no-repeat;
 	background-size: 100% 100%;
-	color:#fff;
+	
 }
 input[name="username"],input[name="password"],input[name="password_2"]{
 	width:100%;

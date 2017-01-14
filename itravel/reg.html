@@ -37,12 +37,13 @@
 			</div>
 			 <div>
 			    <input type="text" name="imgCodeInput" placeholder="图片验证码"> 
-				<div class="imgCode"></div>
+				<input  type="button" class="imgCode">
 				<span class="errorMsg"></span>
 			</div>
 			<div>
 			    <input type="text" name="phoneCodeInput" placeholder="输入短信中的验证码">
-				<button class="phoneCodeSend">发送验证码</button>
+				<!-- <button class="phoneCodeSend">发送验证码</button> -->
+				<input type="button" class="phoneCodeSend bckImg" value="发送验证码">
 				<span class="errorMsg"></span>
 			</div>
 			<div>
@@ -57,9 +58,9 @@
 				<input type="password" name="password_2" placeholder="请重复输入密码">
 				<span class="errorMsg"></span>
 			</div>
-<!-- 			<button  id="regBtn">注 册</button> -->
 		</form>
-		<button  id="regBtn">注 册</button>
+		<!-- <button  id="regBtn">注 册</button> -->
+		<input type="button" id="regBtn" value="注 册">
 		<div class="comment">
 			<div>
 				已有账号？<a href="javascript:void(0);" class="login">登录</a>
@@ -125,7 +126,8 @@
     		</p>
     		<p class="forget"><a href="resetPwd.html">忘记密码？</a></p>
     	</form> 	
-    	<button  id="loginBtn">登  录</button>	
+    	<!-- <button  id="loginBtn">登  录</button>	 -->
+    	<input type="button" id="loginBtn" value="登 录">
     </div>
 </div>
 <script src="js/jquery.js"></script>
