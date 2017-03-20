@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<meta name="viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+	<style>
+		*{
+			box-sizing: border-box;
+			margin:0px;
+			padding:0px;
+		}
+		a{
+			text-decoration: none;
+		}
+		#login-page{
+			width:100%;
+			height:100%;
+		}
+		h1{
+			width:100%;
+			height:10%;
+			text-align: center;
+			font-size:50px;
+			padding:30px;
+			border-bottom: 1px solid #000;
+		}
+		#content{
+			width:100%;
+			padding:50px 10%;
+		}
+		#login-form{
+			width:100%;
+		}
+		form>div{
+			width:100%;
+			height:120px;
+			padding:20px;
+			border-bottom: 2px solid #000;
+		}
+		label,input[type="text"],input[type="password"]{
+			display:inline-block;
+			height:100%;
+			/*line-height: 100%;*/
+			text-align: left;
+			font-size: 30px;
+		}
+		input[type="text"],input[type="password"]{
+			border:none;
+			width:70%;
+			outline:none;
+		}
+		label{
+			width:20%;
+		}
+		.login-btn{
+			width:80%;
+			height:80px;
+			margin:30px 10%;
+			background:#5e8d1d;
+			color:#fff;
+			font-size:35px;
+			text-align: center;
+			line-height: 80px;
+		}
+		.warn{
+			display: block;
+			width:100%;
+			height:80px;
+			padding:20px 0;
+			color:grey;
+			font-size:15px;
+			text-align: center;
+
+		}
+
+		
+
+	</style>
+</head>
+<body>
+<div id="login-page">
+	<h1>旅途网欢迎您</h1>
+	<div id="content">
+		<form action="" class="login-form">
+			<div class="phone">
+				<label>手机号</label>
+				<input type="text">
+			</div>
+			<div class="pwd">
+				<label>密码</label>
+				<input type="password">
+			</div>
+			<input type="button" class="login-btn" value="登录">
+		</form>
+		<a class="warn" href="#">登录表示您已同意《旅途网用户协议》</a>
+
+	</div>
+</div>
+
+</body>
+</html>
