@@ -1,8 +1,8 @@
 // JavaScript Document
-var board=new Array();
-var score=0;
-var step=0;
-var dir=0;
+var board = new Array();
+var score = 0;
+var step = 0;
+var dir = 0;
 var hasConflicted = new Array();
 var startx = 0;
 var starty = 0;
@@ -12,7 +12,7 @@ var endy = 0;
 $(document).ready(function(){
 	prepareForMobile();
 	newgame();
-	});
+});
 function prepareForMobile(){
 
     if( documentWidth > 500 ){
@@ -37,7 +37,7 @@ function newgame(){
 	//添加两个随机数字块
 	getNumber();
 	getNumber();
-	}
+}
 function init(){
 	 for( var i = 0 ; i < 4 ; i ++ )
         for( var j = 0 ; j < 4 ; j ++ ){
@@ -52,11 +52,11 @@ function init(){
 		for(var j=0;j<4;j++){
 			board[i][j]=0;
 			hasConflicted [i][j]=false;
-			}
 		}
+	}
 	
 	updateData();
-	}
+}
 function updateData(){
 	$(".number-cell").remove();
 	for(var i=0;i<4;i++){
@@ -85,34 +85,30 @@ function updateData(){
     $('.number-cell').css('font-size',0.6*cellSideLength+'px');
 }
 $(document).keydown(function(e){
-	e.preventDefault();
+	 event.preventDefault();
 	switch(e.keyCode){
 		case 37:
 			dir=0;
 			if(moveLeft()){
 				 setTimeout("getNumber()",210);
-				  setTimeout("isgameover()",300);
 				}
 			break;
 		case 38:
 			dir=1;
 			if(moveUp()){
 				setTimeout("getNumber()",210);
-				 setTimeout("isgameover()",300);
 				}
 			break;
 		case 39:
 			dir=2;
 			if(	moveRight()){
 				setTimeout("getNumber()",210);
-				 setTimeout("isgameover()",300);
 				}	
 			break;
 		case 40:
 			dir=3;
 			if(	moveDown()){
 				setTimeout("getNumber()",210);
-				 setTimeout("isgameover()",300);
 				}
 			break;
 		}
@@ -123,7 +119,6 @@ document.addEventListener('touchstart',function(event){
 });
 
 document.addEventListener('touchend',function(event){
-	event.preventDefault();
     endx = event.changedTouches[0].pageX;
     endy = event.changedTouches[0].pageY;
 
@@ -155,7 +150,6 @@ document.addEventListener('touchend',function(event){
     else{
         if( deltay > 0 ){
             //move down
-			event.preventDefault();
 			dir=3;
             if( moveDown() ){
                 setTimeout("getNumber()",210);
@@ -206,7 +200,7 @@ function moveLeft(){
 	}
 	step += 1;
     updateStep( step);
-	setTimeout("updateData()",200);
+	setTimeout(updateData,200);
 	return true;
 }
 function moveRight(){
@@ -255,7 +249,7 @@ function moveUp(){
 				for(var k=0;k<i;k++){
 					if(board[k][j]==0&&noBlock(i,j,k,dir)){
 						//移动
-						showMoveAnimation(i,j,i,k);
+						showMoveAnimation(i,j,k,j);
 						board[k][j]=board[i][j];
 						board[i][j]=0;
 
@@ -263,7 +257,7 @@ function moveUp(){
 						//updateData();
 					}else if(board[k][j]==board[i][j]&&noBlock(i,j,k,dir)&&!hasConflicted[i][j]){
 						//相加
-						showMoveAnimation(i,j,i,k);
+						showMoveAnimation(i,j,k,j);
 						board[k][j]=2*board[i][j];
 						board[i][j]=0;
 						score += board[i][k];
@@ -288,17 +282,17 @@ function moveDown(){
 	for(var j=0;j<4;j++){
 		for(var i=0;i<3;i++){
 			if(board[i][j]!=0){
-				for(var k=i+1;k<4;k++){
+				for(var k=3;k>i;k--){
 					if(board[k][j]==0&&noBlock(i,j,k,dir)){
 						//移动
-						showMoveAnimation(i,j,i,k);
+						showMoveAnimation(i,j,k,j);
 						board[k][j]=board[i][j];
 						board[i][j]=0;
 						break;
 						//updateData();
 					}else if(board[k][j]==board[i][j]&&noBlock(i,j,k,dir)&&!hasConflicted[i][j]){
 						//相加
-						showMoveAnimation(i,j,i,k);
+						showMoveAnimation(i,j,k,j);
 						board[k][j]=2*board[i][j];
 						board[i][j]=0;
 						score += board[i][k];
@@ -316,8 +310,3 @@ function moveDown(){
 	setTimeout("updateData()",200);
 	return true;
 }
-function isgameover(){
-	if(nospace( board ) &&!canMoveLeft( board ) &&!canMoveRight( board ) &&!canMoveUp( board ) &&!canMoveDown( board )){
-		alert("Game Over!")
-		}
-	}
